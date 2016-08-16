@@ -38,7 +38,10 @@
 	<!--<script src="static/js/javascript.js"></script>-->
 	<title>Tutorial Page</title>
         <style>
-            li {
+            .top-right-tab {
+                width: 50%;
+            }
+            .bottom-right-tab {
                 width: 50%;
             }
         </style>
@@ -68,6 +71,8 @@ function closeNav() {
         document.getElementById("main").style.marginLeft= "0";
         document.getElementById("main").style.opacity = "1";
 }
+
+
 </script>
 
 <!---------------------------------------------------------------------------------->
@@ -134,10 +139,10 @@ for c in ['red', 'green', 'yellow', 'blue']:
 			<p id='result'></p>
 			<textarea id="code2" style="height: 200px; ovrflow-y: scroll;">
 print"hello, world!!!!! This works!!!"</textarea>
-			<textarea id="debugger_cm" style="height: 150px;" ></textarea>
+			<!--<textarea id="debugger_cm" style="height: 150px;" ></textarea>-->
 			<button id="skulpt_run">Run</button>
 			<button id="skulpt_js_output" onclick="var cm = $('.CodeMirror')[2].CodeMirror;$(cm.getWrapperElement()).toggle()">Hide/Unhide JS</button>
-			<textarea id="codeoutput" rows="30" cols="85" style="overflow-y: scroll">print "Hello, World!"</textarea>
+			<!--<textarea id="codeoutput" rows="30" cols="85" style="overflow-y: scroll">print "Hello, World!"</textarea>-->
 
 <!---------------------------------------------------------------------------------->
 <!--------------By Michael Borden and Tsz Ling Mo----------------------------------->
@@ -157,10 +162,10 @@ print"hello, world!!!!! This works!!!"</textarea>
 <!-----------------Output (top-right)----------------------------------------------->			
 <div id="e" class="split">
     <ul class="nav nav-tabs">
-        <li class="active">
+        <li class="active top-right-tab">
             <a data-toggle="tab" href="#top-right">Tab 1</a>
         </li>
-        <li>
+        <li class="top-right-tab">
             <a data-toggle="tab" href="#top-left">Tab 2</a>
         </li>
     </ul>
@@ -178,12 +183,31 @@ print"hello, world!!!!! This works!!!"</textarea>
 
 <!-----------------Debugging (bottom-right)----------------------------------------->
 
-			<div id="f" class="split" style="margin-top: 20px;">
-
-				<div style="display: inline-block; width: 100%;"
-					<textarea id="interactive" cols="85" rows="30"></textarea>
-				</div>
-			</div>
+			<div id="f" class="split">
+                            <ul class="nav nav-tabs">
+                                <li class="active bottom-right-tab">
+                                    <a data-toggle="tab" href="#bottom-right-tab-1">Tab 1</a>
+                                </li>
+                                <li class="bottom-right-tab">
+                                    <a data-toggle="tab" href="#bottom-right-tab-2">Tab 2</a>
+                                </li>
+                            </ul>    
+                            
+                            <div class="tab-content ">
+                                
+                                
+                                
+                                    <div id="bottom-right-tab-1" class="tab-pane fade in active">
+                                        <textarea id="debugger_cm" style="height: 150px;" ></textarea>
+                                        <textarea id="codeoutput" rows="30" cols="85" style="overflow-y: scroll;">print "Hello, World!"</textarea>
+                                    </div>
+                                
+                                    <div id="bottom-right-tab-2" class="fade" style="height:100%; width:100%;">
+                                        <textarea id="interactive" style="width: 100%;" cols="85" rows="30"></textarea>
+                                    </div>
+                                        
+                                    
+                            </div> 
 
 <!---------------------------------------------------------------------------------->
 <!-----------------EEEEEEE--NNN---NN--DDDDD----------------------------------------->
