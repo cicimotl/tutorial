@@ -188,7 +188,7 @@ sup {
 
 #edoutput {
     background: #ccc;
-    color: #black;
+    color: black;
     height: 100px;
     overflow: auto;
     font-family: "Consolas","Lucida Console","Monaco",monospace;
