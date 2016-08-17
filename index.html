@@ -1,243 +1,199 @@
-
-<html style="background-color: #002b36; border-width:5px; border-style: none dashed; border-color: #090;"> 
-    <head onclick="closeNav()" style="background-color: #cb4b16;"> 
-	<meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content="width=device-width, initial-scale=1">
         
-	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
+        <link href="static/css/animate.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="static/css/stylesheet_tut.css" type="text/css">
-	<link rel="stylesheet" type="text/css" media="all" href="static/css/codemirror.css">
-	<link rel="stylesheet" type="text/css" media="all" href="static/css/solarized.css">
-    	<link rel="stylesheet" type="text/css" media="all" href="static/css/main.css">
-    	<link rel="stylesheet" type="text/css" media="all" href="static/css/show-hint.css">
-	<link rel="stylesheet" type="text/css" media="all" href="static/css/simplescrollbars.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    	<script src="static/js/codemirrorrepl.js" type="text/javascript"></script>
-    	<script src="static/js/repl.js" type="text/javascript"></script>
-    	<script src="static/js/python.js" type="text/javascript"></script>
-    	<script src="static/js/skulpt.min.js" type="text/javascript"></script>
-    	<script src="static/js/debugger.js" type="text/javascript"></script>
-    	<script src="static/js/skulpt-stdlib.js" type="text/javascript"></script>
-    	<script src="static/js/editor.js" type="text/javascript"></script>
-    	<script src="static/js/debugger_cm.js" type="text/javascript"></script>
-	<script src="static/js/closebrackets.js"></script>
-	<script src="static/js/active-line.js"></script>
-        <script src="static/js/matchbrackets.js"></script>
-	<script src="static/js/fullscreen.js"></script>
-	<script src="static/js/markdown.js"></script>
-	<script src="static/js/bootbox.js"></script>
-	<script src="static/js/bootstrap.min.js"></script>
-	<script src="static/js/bootstrap.js"></script>
-	<script src="static/js/jquery-1.11.2.min.js"></script>
-        <script src="static/js/annotatescrollbar.js"></script>
-        <script src="static/js/matchesonscrollbar.js"></script>
-        <script src="static/js/searchcursor.js"></script>
-        <script src="static/js/match-highlighter.js"></script>
-	<script src="static/js/simplescrollbars.js"></script>
-	<!--<script src="static/js/javascript.js"></script>-->
-	<title>Tutorial Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Acme|Risque|Special+Elite" rel="stylesheet">
         <style>
-            .top-right-tab {
-                width: 50%;
+            body {
+                background-image: url('http://karenpalmer.com/wp-content/uploads/2016/01/Stars.jpg');
+                margin-top: -230px;
+                margin-bottom: 0;
             }
-            .bottom-right-tab {
-                width: 50%;
+            
+            .text-center {
+                text-align: center;
             }
+            @media screen and (min-width: 1000px) {
+                .button {
+                    margin-top: -5%;
+                }
+            }
+            @-webkit-keyframes mymove {
+                10% { color: #cb4b16; }
+                25% { color: #dc322f; }
+                40% { color: #d33682; }
+                55% { color: #6c71c4; }
+                75% { color: #268bd2; }
+                90% { color: #2aa198; }
+                100% { color: #859900; }
+            }
+            @keyframes mymove {
+                10% { color: #cb4b16; }
+                25% { color: #dc322f; }
+                40% { color: #d33682; }
+                55% { color: #6c71c4; }
+                75% { color: #268bd2; }
+                90% { color: #2aa198; }
+                100% { color: #859900; }
+            }
+            .attn {
+                color: #b58900;
+                -webkit-animation: mymove 5s infinite;
+                animation: mymove 5s infinite;
+                z-index: 999;
+            }
+            .button {
+                background-color: #859900;
+                border: none;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                margin-top: 14.5%;
+            }
+            .button:hover {
+                background-color: yellow;
+            }
+            a {
+                font-size: 20px;
+                color: black;
+            }
+            a:hover {
+                color: lightgrey;
+            }
+            #titles {
+                position: absolute;
+                width: 18em;
+                height: 50em;
+                bottom: 0;
+                left: 50%;
+                margin-left: -9em;
+                font-size: 350%;
+                text-align: justify;
+                overflow: hidden;
+                -webkit-transform-origin: 40% 100%;
+                -moz-transform-origin: 40% 100%;
+                -ms-transform-origin: 40% 100%;
+                -o-transform-origin: 40% 100%;
+                transform-origin: 40% 100%;
+                -webkit-transform: perspective(300px) rotateX(15deg);
+                -moz-transform: perspective(300px) rotateX(15deg);
+                -ms-transform: perspective(300px) rotateX(15deg);
+                -o-transform: perspective(300px) rotateX(15deg);
+                transform: perspective(300px) rotateX(15deg);
+            }
+
+            #titles:after {
+                position: absolute;
+                content: ' ';
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 60%;
+                background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+                background-image: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+                background-image: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+                background-image: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+                background-image: linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+                pointer-events: none;
+                opacity: 0;
+            }
+
+            #titlecontent {
+                position: absolute;
+                -webkit-animation: scroll 20s linear 1s infinite;
+                -moz-animation: scroll 20s linear 1s infinite;
+                -ms-animation: scroll 20s linear 1s infinite;
+                -o-animation: scroll 20s linear 1s infinite;
+                animation: scroll 20s linear 1s infinite;
+            }
+            
+
+            @-webkit-keyframes scroll {
+                0% { top:100%;}
+                50%{opacity: 0.8;}
+                95%{opacity: 0;}
+                100% { top: 50%; }
+    }
+
+            @-moz-keyframes scroll {
+                0% { top: 100%;}
+                50%{opacity: 0.8;}
+                95%{opacity: 0;}
+                100% { top: 50%; }
+            }
+
+            @-ms-keyframes scroll {
+                0% { top: 100%;}
+                50%{opacity: 0.8;}
+                95%{opacity: 0;}
+                100% { top: 50%; }
+            }
+
+            @-o-keyframes scroll {
+                0% { top: 100%;}
+                50%{opacity: 0.8;}
+                95%{opacity: 0;}
+                100% { top: 50%; }
+            }
+
+            @keyframes scroll {
+                0% { top: 100%;}
+                50%{opacity: 0.8;}
+                95%{opacity: 0;}
+                100% { top: 50%; }
+            }
+
         </style>
-    </head> 
- 
-<body id="myPage" style="background-color: #002b36; transition: background-color .5s;">
-<script>
-var nav_bool = 0;
-function onNav() {
-        if (nav_bool == 0){
-                nav_bool = 1;
-                document.getElementById("mySidenav").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-                document.getElementById("main").style.opacity = "0.50";
-        }
-        else{
-                nav_bool = 0;
-                document.getElementById("mySidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft= "0";
-                document.getElementById("main").style.opacity = "1";
-        }
-}
+    </head>
+    <body>
+        
+            <div class='container'>
+                    <div class="attn" style="font-family: 'Risque', cursive;font-size: 200px;">
+                         <h1>Attn: </h1>
+                    </div>
+            </div>
+              
+        
+        
+        <div class="container">
+            
+                
+                    <div id="titles">
+                        <div id="titlecontent" >
+                            <p style="color: yellow;">Hello, World! Welcome to the tutorial. This page is work in progress. Bhah Bhah Bhah...... Bhah Bhah Bhah...... Bhah Bhah Bhah......
+                                Bhah Bhah Bhah...... Bhah Bhah Bhah...... Bhah Bhah Bhah...... Bhah Bhah Bhah...... Bhah Bhah Bhah...... Bhah Bhah Bhah......
+                            </p>
+                        </div>
+                    </div>
+               
+        </div>  
+                
+        
+        <a href="tutorial.html"><button type="button" class="col-md-3 btn btn-lg button">Enter</button></a>
+        
 
-function closeNav() {
-        nav_bool = false;
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-        document.getElementById("main").style.opacity = "1";
-}
-
-
-</script>
-
-<!---------------------------------------------------------------------------------->
-<!---------------------Sidebar Popout----------------------------------------------->
-<!---------------------------------------------------------------------------------->
-
-	<div id="mySidenav" class="sidenav">
-	  <a href="javascript:void(0)" class="closebtn" onclick="onNav()">&times;</a>
-	  <a href="#" >About</a>
-	  <a href="#" >Services</a>
-	  <a href="#" >Clients</a>
-	  <a href="#" >Contact</a>
-	</div>
-
-<!---------------------------------------------------------------------------------->
-<!---------------------Top Navbar--------------------------------------------------->
-<!---------------------------------------------------------------------------------->
-
-	<div class="row" id="nav_bah">
-		<div id="side_nav_bah" style="font-size: 30px; cursor: pointer; float: left;" onclick="onNav()"><b>&#9776;</b></div>
-	        <input id="search_box" type="text" placeholder="  Search (not working)" style="float: left;">
-	        <button id="search_button" type="button" style="float: left;"><b>FIND</b> <span class="glyphicon glyphicon-search"></span></button>
-		<button id="run_python" type="button" style="float: left;"><b>RUN</b> <span class="glyphicon glyphicon-play"></span></button>
-        </div>
-
-<!---------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------->
-
-<div id="main" onclick="closeNav()">
-	<div class="container-fluid" style="margin:0px; overflow: hidden; height: 94%;">
-		<div id="a" class="split split-horizontal scrollh" style="padding: 5px; overflow-y: scroll; background-color: #f0eac1;">
-
-
-	<!------------------->
-	<!- Math and Python ->
-	<!- Tutorial Chpt.1 ->
-	<!- Moded:01-14-16  ->
-<!---------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------->
-			<h2><b>Welcome to the tutorial!</b></h2>
-
-			<p>Examples:
-				<a href="#" id="codeexample1">1</a>
-				<a href="#" id="codeexample2">2</a>
-				<a href="#" id="codeexample3">3</a>
-				<a href="#" id="codeexample4">4</a>
-				<a href="#" id="codeexample5">5</a>
-				<a href="#" id="codeexample6">6</a>
-				<a href="#" id="codeexample7">7</a>
-				<a href="#" id="codeexample8">8</a>
-				Ctrl-Enter to run.
-			</p>
-			<textarea id="code" style="margin-left: 10px; width:50%; overflow-y: scroll;" class="scrollh">
-import turtle
-
-t = turtle.Turtle()
-
-for c in ['red', 'green', 'yellow', 'blue']:
-    t.color(c)
-    t.forward(75)
-    t.left(90)</textarea>
-			<p id='result'></p>
-			<textarea id="code2" style="height: 200px; ovrflow-y: scroll;">
-print"hello, world!!!!! This works!!!"</textarea>
-			<!--<textarea id="debugger_cm" style="height: 150px;" ></textarea>-->
-			<button id="skulpt_run">Run</button>
-			<button id="skulpt_js_output" onclick="var cm = $('.CodeMirror')[2].CodeMirror;$(cm.getWrapperElement()).toggle()">Hide/Unhide JS</button>
-			<!--<textarea id="codeoutput" rows="30" cols="85" style="overflow-y: scroll">print "Hello, World!"</textarea>-->
-
-<!---------------------------------------------------------------------------------->
-<!--------------By Michael Borden and Tsz Ling Mo----------------------------------->
-<!---------------------------------------------------------------------------------->
-
-
-
-<!---------------------------------------------------------------------------------->
-<!--------------Output/Debugging (right side)------------------------------------------------->
-<!---------------------------------------------------------------------------------->
-
-		</div>
-		<div id="b" class="split split-horizontal" style="background-color: #002b36;">
-			<!--<p>Output: (<a href="#" id="clearoutput">clear</a>)</p>-->
-
-
-<!-----------------Output (top-right)----------------------------------------------->			
-<div id="e" class="split">
-    <ul class="nav nav-tabs">
-        <li class="active top-right-tab">
-            <a data-toggle="tab" href="#top-right">Tab 1</a>
-        </li>
-        <li class="top-right-tab">
-            <a data-toggle="tab" href="#top-left">Tab 2</a>
-        </li>
-    </ul>
-    <div class="tab-content">
-        <div id="top-right" class="tab-pane fade in active" style="height:100%; width:100%; float: left; border-style: outset; margin-left: 0px;">
-            <pre id="edoutput" style="height: 100%; width: 100%; margin: 0px; font-size: 20px; background-color: #dbdbdb;"></pre>
-        </div>
-
-        <div id="top-left" class="tab-pane fade" style="height:100%; width:100%; float: right; border-style: outset; margin-right: -0px;">
-            <div id="mycanvas" style="height: 100%; width: 100%; margin: 0px; background-color: #dbdbdb;"></div>
-        </div>
-    </div>
-</div>
-
-
-<!-----------------Debugging (bottom-right)----------------------------------------->
-
-			<div id="f" class="split">
-                            <ul class="nav nav-tabs">
-                                <li class="active bottom-right-tab">
-                                    <a data-toggle="tab" href="#bottom-right-tab-1">Tab 1</a>
-                                </li>
-                                <li class="bottom-right-tab">
-                                    <a data-toggle="tab" href="#bottom-right-tab-2">Tab 2</a>
-                                </li>
-                            </ul>    
-                            
-                            <div class="tab-content ">
-                                
-                                
-                                
-                                    <div id="bottom-right-tab-1" class="tab-pane fade in active">
-                                        <textarea id="debugger_cm" style="height: 150px;" ></textarea>
-                                        <textarea id="codeoutput" rows="30" cols="85" style="overflow-y: scroll;">print "Hello, World!"</textarea>
-                                    </div>
-                                
-                                    <div id="bottom-right-tab-2" class="fade" style="height:100%; width:100%;">
-                                        <textarea id="interactive" style="width: 100%;" cols="85" rows="30"></textarea>
-                                    </div>
-                                        
-                                    
-                            </div> 
-
-<!---------------------------------------------------------------------------------->
-<!-----------------EEEEEEE--NNN---NN--DDDDD----------------------------------------->
-<!-----------------EE-------NNNN--NN--DD---DD--------------------------------------->
-<!-----------------EEEE-----NN-NN-NN--DD----DD-------------------------------------->
-<!-----------------EE-------NN--NNNN--DD---DD--------------------------------------->
-<!-----------------EEEEEEE--NN---NNN--DDDDD----------------------------------------->
-<!---------------------------------------------------------------------------------->
-
-		</div>
-	</div>
-</div>
-
-<!---------------------------------------------------------------------------------->
-<!-----------------Some Random JS Shit---------------------------------------------->
-<!---------------------------------------------------------------------------------->
-
-<script src="static/js/split.js"></script>
-<script>
-    Split(['#a', '#b'], {
-      gutterSize: 4,
-      cursor: 'col-resize'
-    })
-
-    Split(['#e', '#f'], {
-      direction: 'vertical',
-      sizes: [50, 50],
-      gutterSize: 4,
-      cursor: 'row-resize'
-    })
-</script>
-</body>
+        
+                <script src="static/js/jquery.lettering.js"></script>
+                <script src="static/js/jquery.textillate.js"></script>
+                <script type="text/javascript">                        
+                    $( document ).ready(function() {  
+            
+                        $('.attn').textillate({
+                            in: {
+                                effect:'shake',
+                                delay: 50,
+                                sequence: true
+                            }
+                        });
+                    });
+                </script>                 
+    </body>
 </html>
