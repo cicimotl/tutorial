@@ -1,0 +1,99 @@
+body {
+    background-image: url('https://scontent-lga3-1.xx.fbcdn.net/v/t35.0-12/14060457_10210500806299193_27143124_o.jpg?oh=111f0f01fe43468e25f30002c5ba9041&oe=57B6594D');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.attn {
+    font-family: 'Rubik One', sans-serif;
+    font-size: 150px; 
+    color: yellow;
+    margin-left: 0;
+    padding: 20px;
+}
+.button {
+    border-radius: 12px;
+    text-align: center;
+    -webkit-transition-duration: 0.5s;
+    cursor: pointer;
+    margin-right: 20px;
+    background: yellow;
+    color: black;
+}
+.button:hover {
+    background-color: red;
+}
+a {
+    font-size: 30px;
+    color: black;
+}
+a:hover {
+    color: white;
+}
+#wrapper {
+    position: absolute;
+    width: 80%;
+    height: 50em;
+    bottom:0;
+    left: 32%;
+    margin-left: -9em;
+    font-size: 350%;
+    text-align: justify;
+    overflow: hidden;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 100%;
+    -webkit-transform: perspective(300px) rotateX(15deg);
+    -moz-transform: perspective(300px) rotateX(15deg);
+    -ms-transform: perspective(300px) rotateX(15deg);
+    -o-transform: perspective(300px) rotateX(15deg);
+    transform: perspective(500px) rotateX(15deg);
+}
+#wrapper:after {
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+    background-image: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+    background-image: linear-gradient(top, rgba(0,0,0,0.1) 0%, transparent 100%);
+    pointer-events: none;
+    opacity: 0;
+}
+#scroll-text {
+    position: relative;
+    -webkit-animation: scroll 20s linear 2s infinite;
+    -moz-animation: scroll 20s linear 2s infinite;
+    -ms-animation: scroll 20s linear 2s infinite;
+    -o-animation: scroll 20s linear 2s infinite;
+    animation: scroll 20s linear 2s infinite;
+}
+@-webkit-keyframes scroll {
+    0% {top: 100%; opacity:0;}
+    5% {opacity:1;}
+    50%{opacity:0.8;}
+    100%{top:50%;}
+}
+@-moz-keyframes scroll {
+    0% {top: 100%; opacity:0;}
+    5% {opacity:1;}
+    50%{opacity:0.8;}
+    100%{top:50%;}
+}
+@-ms-keyframes scroll {
+    0% {top: 100%; opacity:0;}
+    5% {opacity:1;}
+    50%{opacity:0.8;}
+    100%{top:50%;}
+}
+@-o-keyframes scroll {
+    0% {top: 100%; opacity:0;}
+    5% {opacity:1;}
+    50%{opacity:0.8;}
+    100%{top:50%;}
+}
+@keyframes scroll {
+    0% {top: 100%; opacity:0;}
+    5% {opacity:1;}
+    50%{opacity:0.8;}
+    100%{top:50%;}
+}
